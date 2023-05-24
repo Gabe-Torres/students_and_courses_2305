@@ -14,6 +14,8 @@ RSpec.describe Course do
 
       expect(course.name).to eq("Calculus")
       expect(course.capacity).to eq(2) 
+      expect(course.students).to eq([])
+      expect(course.full?).to eq(false)
     end
   end
 end
