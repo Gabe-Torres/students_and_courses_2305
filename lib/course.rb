@@ -14,5 +14,4 @@ class Course
     def full?
       @full
     end
-
 end
