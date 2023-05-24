@@ -9,5 +9,11 @@ RSpec.describe Gradebook do
       gradebook = Gradebook.new 
       expect(gradebook).to be_an_instance_of(Gradebook)
     end
+
+    it 'is initialized with attributes' do
+      gradebook = Gradebook.new 
+      
+      expect(gradebook.instructors).to eq(String)
+    end
   end
 end
