@@ -7,5 +7,9 @@ class Student
       @name = student_details[:name]
       @age =  student_details[:age]
       @scores = []
-  end
+    end
+
+    def log_scores(grade)
+      @scores.push(grade)
+    end
 end

@@ -10,9 +10,18 @@ RSpec.describe Student do
 
     it 'is initialized with attributes' do
       student = Student.new({name: "Morgan", age: 21})
+
       expect(student.name).to eq('Morgan')
       expect(student.age).to eq(21)
       expect(student.scores).to eq([])
+    end
+
+    it 'can log scores' do
+      student = Student.new({name: "Morgan", age: 21})
+      student.log_scores(89)
+      student.log_scores(78)
+
+      expect(student.scores).to eq([89,78])
     end
   end
 end
