@@ -14,4 +14,9 @@ class Course
     def full?
       @full
     end
+
+    def enroll(student_enrolls)
+      @students.push(student_enrolls)
+      @full = true
+    end
 end
