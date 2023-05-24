@@ -9,7 +9,16 @@ class Student
       @scores = []
     end
 
-    def log_scores(grade)
-      @scores.push(grade)
+    def log_scores(grades)
+      @scores << grades
+    end
+
+    def grade
+      sum = 0
+      @scores.each do |element|
+        sum += element
+      end
+      average = sum.to_f / @scores.length
+      average
     end
 end
